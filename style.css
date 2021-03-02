@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: #000d15;
+    z-index: 0;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Cantarell", sans-serif;
+    color: #B8D8D8;
 }
 
 .app {
@@ -17,7 +20,7 @@ body {
 }
 
 header h1 {
-    margin: 50px 0px 30px 0px;
+    margin: 500px 0px 30px 0px;
     text-align: center;
     font-size: 40px
 }
@@ -27,37 +30,35 @@ header p {
 }
 
 .pads {
-    background: lightblue;
     width: 100%;
     display: flex;
 }
 
 .pads>div {
-    height: 100px;
+    height: 155px;
     width: 100px;
     flex: 1;
+    background: #fffef7;
+    border-radius: 10%;
 }
 
-.pad1 {
-    background: #60d394;
+@keyframes jump {
+    0% {
+        bottom: 0%;
+    }
+    50% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0%;
+    }
 }
 
-.pad2 {
-    background: #d37960;
-}
-
-.pad3 {
-    background: #c060d3;
-}
-
-.pad4 {
-    background: #d3d160;
-}
-
-.pad5 {
-    background: #606dd3;
-}
-
-.pad6 {
-    background: #60abd3;
+.visual>div {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0;
+    z-index: -1;
 }
